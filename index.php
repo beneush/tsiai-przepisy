@@ -54,6 +54,7 @@ $result = $conn->query($sql);
             
                     // Generate HTML for the recipe
                     echo '<div class="recipe">';
+                    // xd
                     echo "<a href=\"http://localhost/beneush/Przepisy/recipe.php?id=$ID\"><img src=\"$icon\" alt=\"Recipe Icon\"></a>";
                     echo "<h2>$name</h2>";
                     // You can include additional information like ingredients and how to make here
