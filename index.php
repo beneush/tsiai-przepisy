@@ -12,6 +12,12 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT * FROM recipes;";
+
+if (isset($_GET['search'])) {
+    $search = $_GET['search'];
+    $sql = "SELECT * FROM recipes WHERE name LIKE \"%$search%\";";
+}
+
 $result = $conn->query($sql);
 ?>
 
@@ -30,8 +36,8 @@ $result = $conn->query($sql);
             </div>
 
             <div class="search-bar">
-                <form action="search.php" method="get">
-                    <input type="text" class="search-input" placeholder="Wyszukaj przepisu..." required>
+                <form action="index.php" method="get">
+                    <input id="search" name="search" type="text" class="search-input" placeholder="Wyszukaj przepisu...">
                     <button type="submit" class="search-button">Szukaj</button>
                 </form>
             </div>
