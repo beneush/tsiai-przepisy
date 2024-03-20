@@ -1,0 +1,248 @@
+:root {
+    --background: #0B0C10;
+    --white: #FFFFFF;
+    --gray: #1F2833;
+    --light-gray: #C5C6C7;
+    --light-blue: #66FCF1;
+    --blue: #45A29E;
+}
+
+@font-face {
+    font-family: pussy;
+    src: url('http://localhost/beneush/Przepisy/font/Phenomena-Bold.eot');
+    src: url('http://localhost/beneush/Przepisy/font/Phenomena-Bold.eot?#iefix') format('embedded-opentype'),
+    url('http://localhost/beneush/Przepisy/assets/font/Phenomena-Bold.woff2') format('woff2'), 
+    url('http://localhost/beneush/Przepisy/assets/font/Phenomena-Bold.woff') format('woff'),
+    url('http://localhost/beneush/Przepisy/assets/font/Phenomena-Bold.ttf') format('truetype');
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'pussy', sans-serif;
+}
+
+.header-container {
+    display: flex;
+}
+
+.logo {
+    color: var(--light-blue);
+    margin-left: 60px;
+}
+
+.search-bar {
+    width: 500px;
+    margin: 25px auto;
+    position: relative;
+    margin-left: 500px;
+}
+  
+.search-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    color: var(--gray);
+}
+  
+.search-button {
+    width: 60px;
+    height: 37px;
+    background-color: var(--light-blue);
+    color: var(--gray);
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.add-button button {
+    margin-top: 25px;
+    margin-right: 60px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--gray);
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button button:hover {
+    background-color: var(--blue);
+}
+
+.back-button button {
+    margin-top: 25px;
+    margin-right: 60px;
+    margin-left: 1460px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--gray);
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: var(--blue);
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid var(--light-gray);
+    border-radius: 12px;
+    height: auto;
+}
+
+.recipe {
+    width: 420px;
+    height: 300px;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 37px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe:hover {
+    border: 2px solid var(--light-blue);
+    cursor: pointer;
+}
+
+.recipe img {
+    width: 240px;
+}
+
+.recipe h2 {
+    color: var(--blue);
+}
+
+.recipe-name {
+    color: var(--blue);
+    text-align: center;
+    font-size: 42px;
+}
+
+.recipe-info {
+    display: flex;
+    border: 3px solid var(--light-gray);
+    border-radius: 12px;
+}
+
+.ingredients {
+    margin-left: 30px;
+    margin-right: 50px;
+    color: var(--white);
+}
+
+.recipe-info h3 {
+    font-size: 30px;
+    text-align: center;
+    color: var(--light-blue);
+}
+
+.ingredients ol {
+    list-style-type: circle;
+}
+
+.ingredients ol li {
+    font-size: 20px;
+}
+
+.how-to-make p {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.image {
+    margin-right: 30px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.add-recipe {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--gray);
+}
+  
+.add-recipe form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.add-recipe h2 {
+    margin-bottom: 20px;
+}
+  
+.add-recipe .form-group {
+    margin-bottom: 20px;
+}
+  
+.add-recipe label {
+    font-weight: bold;
+    color: var(--white);
+}
+  
+.add-recipe input,
+.add-recipe textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+  
+.add-recipe textarea {
+    height: 100px;
+}
+  
+.add-recipe button {
+    padding: 10px 20px;
+    background-color: var(--light-blue);
+    color: var(--background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.add-recipe button:hover {
+    background-color: var(--blue);
+}
+
+.icon-input {
+    height: 200px;
+}
+
+.how-to-make-input {
+    height: 100px;
+    outline: none;
+    overflow-y: auto;
+}
+
+.ingredients-input {
+    height: 100px;
+}
