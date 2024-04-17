@@ -43,7 +43,7 @@ $result = $conn->query($sql);
             </div>
 
             <div class="add-button">
-                <a href="http://localhost/beneush/Przepisy/addRecipe.php"><button>Dodaj Przepis</button></a>
+                <a href="addRecipe.php"><button>Dodaj Przepis</button></a>
             </div>
         </div>
 
@@ -61,7 +61,7 @@ $result = $conn->query($sql);
                     // Generate HTML for the recipe
                     echo '<div class="recipe">';
                     // xd
-                    echo "<a href=\"http://localhost/beneush/Przepisy/recipe.php?id=$ID\"><img src=\"$icon\" alt=\"Recipe Icon\"></a>";
+                    echo "<a href=\"recipe.php?id=$ID\"><img src=\"$icon\" alt=\"Recipe Icon\"></a>";
                     echo "<h2>$name</h2>";
                     // You can include additional information like ingredients and how to make here
                     echo '</div>';

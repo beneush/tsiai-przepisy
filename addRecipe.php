@@ -13,12 +13,12 @@
             </div>
 
             <div class="back-button">
-                <a href="http://localhost/beneush/Przepisy/index.php"><button>Strona Główna</button></a>
+                <a href="index.php"><button>Strona Główna</button></a>
             </div>
         </div>
 
         <div class="add-recipe">
-                <form action="http://localhost/beneush/Przepisy/api/add-recipe.php" method="post">
+                <form action="/api/add-recipe.php" method="post">
                     <div class="form-group">
                         <label for="name">Nazwa:</label>
                         <input type="text" id="name" name="name" placeholder="Wpisz nazwę przepisu..." maxlength="42" required>

@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($_GET['id'])) {
-    header("Location: http://localhost/beneush/Przepisy/index.php");
+    header("Location: index.php");
     die();
 }
 $recipeID = $_GET['id'];
@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM recipes WHERE ID='$recipeID';";
 $result = $conn->query($sql);
 if ($result->num_rows == 0) {
-    header("Location: http://localhost/beneush/Przepisy/index.php");
+    header("Location: index.php");
     die();
 }
 
@@ -48,7 +48,7 @@ $recipeHowToMake = $row['how_to_make'];
             </div>
 
             <div class="back-button">
-                <a href="http://localhost/beneush/Przepisy/index.php"><button>Strona Główna</button></a>
+                <a href="index.php"><button>Strona Główna</button></a>
             </div>
         </div>
 

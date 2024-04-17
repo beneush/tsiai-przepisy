@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: pussy;
+    font-family: breadfont;
     src: url('http://localhost/beneush/Przepisy/font/Phenomena-Bold.eot');
     src: url('http://localhost/beneush/Przepisy/font/Phenomena-Bold.eot?#iefix') format('embedded-opentype'),
     url('http://localhost/beneush/Przepisy/assets/font/Phenomena-Bold.woff2') format('woff2'), 
@@ -18,7 +18,7 @@
 
 body {
     background-color: var(--background);
-    font-family: 'pussy', sans-serif;
+    font-family: 'breadfont', sans-serif;
 }
 
 .header-container {
