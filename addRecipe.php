@@ -18,26 +18,28 @@
         </div>
 
         <div class="add-recipe">
-                <form action="/api/add-recipe.php" method="post">
-                    <div class="form-group">
-                        <label for="name">Nazwa:</label>
-                        <input type="text" id="name" name="name" placeholder="Wpisz nazwę przepisu..." maxlength="42" required>
+            <form action="api/add-recipe.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Nazwa:</label>
+                    <input type="text" id="name" name="name" placeholder="Wpisz nazwę przepisu..." maxlength="42" required>
+                </div>
+                <div class="form-group">
+                    <label for="icon">Ikona:</label>
+                    <div class="addFileInput">
+                        <input type="file" id="icon" name="icon" accept="image/png" required><br><br>
                     </div>
-                    <div class="form-group">
-                        <label for="icon">Ikona:</label>
-                        <input class="icon-input" type="text" id="icon" name="icon" placeholder="Wprowadź Base64 obrazu..." contenteditable="true" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="ingredients">Składniki (Oddziel znakiem "(,)"): </label>
-                        <input class="ingredients-input" type="text" id="ingredients" name="ingredients" placeholder="Wypisz składniki..." required>
-                    </div>
-                    <div class="form-group">
-                        <label for="how-to-make">Jak zrobić:</label>
-                        <input class="how-to-make-input" type="text" id="how-to-make" name="how-to-make" placeholder="Napisz jak przyrządzić przepis" required>
-                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ingredients">Składniki (Oddziel enterem): </label>
+                    <textarea class="ingredients-input" id="ingredients" name="ingredients" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="how-to-make">Jak zrobić:</label>
+                    <textarea class="how-to-make-input" id="how-to-make" name="how-to-make" rows="5" required></textarea>
+                </div>
 
-                    <button type="submit">Dodaj</button>
-                </form>
-            </div>
+                <button type="submit">Dodaj</button>
+            </form>
+        </div>
     </body>
 </html>

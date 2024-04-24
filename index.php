@@ -54,20 +54,23 @@ $result = $conn->query($sql);
                 while ($row = mysqli_fetch_assoc($result)) {
                     $ID = $row["ID"];
                     $name = $row['name'];
-                    $icon = $row['icon'];
                     $ingredients = $row['ingredients'];
                     $how_to_make = $row['how_to_make'];
+                    $iconPath = './assets/img/icons/' . $row["ID"] . '.png';
             
                     // Generate HTML for the recipe
-                    echo '<div class="recipe">';
-                    // xd
-                    echo "<a href=\"recipe.php?id=$ID\"><img src=\"$icon\" alt=\"Recipe Icon\"></a>";
+                    echo "<a href=\"recipe.php?id=$ID\"><div class=\"recipe\">";
+                    if (file_exists($iconPath)) {
+                        echo '<img src="' . $iconPath . '" alt="Ikona">';
+                    } else {
+                        echo '<img src="./assets/img/product-icon-placeholder.png" alt="Ikona produktu">';
+                    }
                     echo "<h2>$name</h2>";
                     // You can include additional information like ingredients and how to make here
-                    echo '</div>';
+                    echo '</div></a>';
                 }
             } else {
-                echo "No recipes found.";
+                echo "<h1>Nie znaleziono przepisów</h1>";
             }
             ?>
         </div>

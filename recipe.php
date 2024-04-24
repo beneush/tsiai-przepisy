@@ -27,10 +27,10 @@ if ($result->num_rows == 0) {
 $row = $result->fetch_assoc();
 
 $recipeName= $row["name"];
-$recipeIcon= $row["icon"];
 $recipeIngredientsString = $row["ingredients"];
-$recipeIngredients = explode("(,)", $recipeIngredientsString);
+$recipeIngredients = explode("\n", $recipeIngredientsString);
 $recipeHowToMake = $row['how_to_make'];
+$iconPath = './assets/img/icons/' . $row["ID"] . '.png';
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +74,13 @@ $recipeHowToMake = $row['how_to_make'];
             </div>
 
             <div class="image">
-                <?php echo "<img src=\"$recipeIcon\" alt=\"Recipe Icon\">"?>
+                <?php
+                if (file_exists($iconPath)) {
+                    echo '<img src="' . $iconPath . '" alt="Ikona">';
+                } else {
+                    echo '<img src="./assets/img/product-icon-placeholder.png" alt="Ikona produktu">';
+                }
+                ?>
             </div>
         </div>
     </body>
